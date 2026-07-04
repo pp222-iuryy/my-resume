@@ -4,72 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Tech Resume</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Noto+Sans+Thai:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="resume-container">
+    <div class="glow-bg glow-blue"></div>
+    <div class="glow-bg glow-red"></div>
+
+    <div class="resume-wrapper">
         
-        <header>
-            <div class="profile-img-box">
-                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200" alt="Profile Picture">
+        <div class="top-logo">
+            <h2>{' C. ENG '}</h2>
+            <p>FACULTY OF ENGINEERING</p>
+        </div>
+
+        <div class="profile-section">
+            <div class="profile-arch">
+                <img src="https://images.unsplash.com/photo-1531297122534-8fa12def110c?auto=format&fit=crop&q=80&w=400" alt="Profile">
             </div>
-            <div class="header-info">
-                <h1>ชื่อ นามสกุล</h1>
-                <div class="tech-role">&lt; Computer Engineering Student /&gt;</div>
-                <div class="contact-info">
-                    <span>contact@email.com</span>
-                    <span>08X-XXX-XXXX</span>
-                    <span>github.com/yourname</span>
-                </div>
+            <div class="click-hint">"คลิกที่รูปเพื่อดู GitHub"</div>
+        </div>
+
+        <div class="name-title">
+            <h1>ชื่อ นามสกุล</h1>
+            <p class="role-text">&lt; Computer Engineering Student /&gt;</p>
+            <div class="tag-house">#สายโค้ดดิ้ง</div>
+        </div>
+
+        <div class="info-grid">
+            <div class="info-box">
+                <span class="info-label">มหาวิทยาลัย</span>
+                <span class="info-value">Walailak University</span>
             </div>
-        </header>
-
-        <main class="main-content">
-            
-            <div class="left-column">
-                <div class="section" style="margin-bottom: 30px;">
-                    <h2 class="section-title">Education</h2>
-                    <div class="timeline-item">
-                        <div class="timeline-title">B.Eng. Computer Engineering</div>
-                        <div class="timeline-subtitle">2024 - Present</div>
-                        <p>กำลังศึกษาชั้นปีที่ 2 เรียนรู้เกี่ยวกับการพัฒนาซอฟต์แวร์ โครงสร้างข้อมูล และปัญญาประดิษฐ์</p>
-                    </div>
-                </div>
-
-                <div class="section">
-                    <h2 class="section-title">Tech Skills</h2>
-                    <div class="skills-container">
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">HTML / CSS</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">Git / GitHub</span>
-                        <span class="skill-tag">Machine Learning</span>
-                    </div>
-                </div>
+            <div class="info-box">
+                <span class="info-label">GPAX</span>
+                <span class="info-value">2.88</span>
             </div>
-
-            <div class="right-column">
-                <div class="section" style="margin-bottom: 30px;">
-                    <h2 class="section-title">Projects</h2>
-                    
-                    <div class="timeline-item">
-                        <div class="timeline-title">Smart Management System</div>
-                        <div class="timeline-subtitle">Java | OOP | GUI</div>
-                        <p>พัฒนาระบบจัดการข้อมูลโดยประยุกต์ใช้หลักการ Object-Oriented Programming (OOP) ออกแบบโครงสร้างคลาส และจำลองการทำงานของฐานข้อมูลเบื้องต้น</p>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-title">Personal Portfolio Website</div>
-                        <div class="timeline-subtitle">HTML | CSS | GitHub Pages</div>
-                        <p>ออกแบบและพัฒนาเว็บไซต์เรซูเม่ส่วนตัว พร้อมนำระบบขึ้นใช้งานจริง (Deploy) ผ่าน Vercel / GitHub</p>
-                    </div>
-                </div>
+            <div class="info-box">
+                <span class="info-label">ลักษณะเด่น</span>
+                <span class="info-value">Full-Stack · AI</span>
             </div>
+            <div class="info-box">
+                <span class="info-label">ความสนใจ</span>
+                <span class="info-value">Data · IoT (รักสนุก)</span>
+            </div>
+        </div>
 
-        </main>
+        <div class="tags-container">
+            <span class="skill-tag">✨ Java / Python</span>
+            <span class="skill-tag">✨ HTML & CSS</span>
+            <span class="skill-tag">✨ Machine Learning</span>
+            <span class="skill-tag">✨ GitHub Master</span>
+        </div>
+
+        <div class="story-box">
+            <h3>Background</h3>
+            <p>นักศึกษาวิศวกรรมคอมพิวเตอร์ชั้นปีที่ 3 ผู้มีความหลงใหลในการเขียนโค้ดและการแก้ปัญหา (Problem Solving) มีประสบการณ์ในการพัฒนาระบบจัดการข้อมูลด้วย OOP และสร้างเว็บไซต์ Portfolio ด้วยตนเอง เป้าหมายคือการนำศาสตร์แห่งเทคโนโลยีมาประยุกต์ใช้เพื่อสร้างสรรค์นวัตกรรมใหม่ๆ</p>
+        </div>
+
+        <div class="action-menu">
+            <a href="#" class="action-btn glow-cyan">แนะนำตัว (ABOUT)</a>
+            <a href="#" class="action-btn glow-red-btn">ทักษะ (SKILLS)</a>
+            <a href="#" class="action-btn">โปรเจกต์ (PROJECTS)</a>
+            <a href="#" class="action-btn">ติดต่อ (CONTACT)</a>
+        </div>
+
+        <div class="bottom-alert">
+            ✦ สมาชิกกลุ่มนักพัฒนาระบบ (System Developer) ✦
+        </div>
 
     </div>
 
