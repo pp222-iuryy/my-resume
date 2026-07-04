@@ -675,3 +675,52 @@ body {
     .top-logo h2 { font-size: 2rem; }
     .profile-arch { width: 190px; height: 260px; }
 }
+
+/* =========================================
+   Flip Effect สำหรับ Profile Arch
+   ========================================= */
+
+/* กำหนดมิติ 3D ให้กับตัวกรอบ Arch */
+.profile-arch.flip-box {
+    perspective: 1000px;
+    cursor: pointer;
+    background-color: transparent; /* เอาสีพื้นหลังออกเพื่อไม่ให้บังเวลาหมุน */
+}
+
+/* ตัวห่อหุ้มรูปภาพทั้งสองด้าน */
+.profile-arch .flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+/* เมื่อถูกคลิก (มีคลาส flipped) ให้หมุน 180 องศา */
+.profile-arch.flipped .flip-inner {
+    transform: rotateY(180deg);
+}
+
+/* ตั้งค่าให้หน้าและหลังซ้อนกันพอดี */
+.profile-arch .flip-front, 
+.profile-arch .flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; /* ซ่อนด้านที่หันหลังอยู่ */
+    border-radius: inherit; /* ดึงความโค้ง (150px) จากกรอบ profile-arch มาใช้โดยอัตโนมัติ */
+    overflow: hidden;
+}
+
+/* ให้ด้านหลังหมุนกลับด้านรอไว้ */
+.profile-arch .flip-back {
+    transform: rotateY(180deg);
+}
+
+/* ปรับรูปให้เต็มกรอบโค้งพอดี ไม่บิดเบี้ยว */
+.profile-arch img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
