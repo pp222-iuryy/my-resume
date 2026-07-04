@@ -1,72 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Resume</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            background: #fff;
-            padding: 20px 40px;
-            margin-top: 30px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1, h2 {
-            color: #333;
-        }
-        .contact-info {
-            margin-bottom: 20px;
-        }
-        .section {
-            margin-bottom: 20px;
-        }
-        .section h2 {
-            border-bottom: 2px solid #333;
-            padding-bottom: 5px;
-        }
-    </style>
+    <title>My Tech Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <!-- ส่วนหัว ข้อมูลส่วนตัว -->
-        <header class="contact-info">
-            <h1>[ชื่อ - นามสกุล ของคุณ]</h1>
-            <p>Email: youremail@example.com | Phone: 08X-XXX-XXXX</p>
-            <p>GitHub: github.com/yourusername</p>
+
+    <div class="resume-container">
+        
+        <header>
+            <div class="profile-img-box">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200" alt="Profile Picture">
+            </div>
+            <div class="header-info">
+                <h1>ชื่อ นามสกุล</h1>
+                <div class="tech-role">&lt; Computer Engineering Student /&gt;</div>
+                <div class="contact-info">
+                    <span>contact@email.com</span>
+                    <span>08X-XXX-XXXX</span>
+                    <span>github.com/yourname</span>
+                </div>
+            </div>
         </header>
 
-        <!-- ส่วนประวัติการศึกษา -->
-        <div class="section">
-            <h2>Education</h2>
-            <p><strong>[ชื่อปริญญา และ สาขาที่เรียน]</strong><br>
-            [ชื่อมหาวิทยาลัย] | [ปีที่เริ่ม] - [ปีที่จบ/ปัจจุบัน]</p>
-        </div>
+        <main class="main-content">
+            
+            <div class="left-column">
+                <div class="section" style="margin-bottom: 30px;">
+                    <h2 class="section-title">Education</h2>
+                    <div class="timeline-item">
+                        <div class="timeline-title">B.Eng. Computer Engineering</div>
+                        <div class="timeline-subtitle">2024 - Present</div>
+                        <p>กำลังศึกษาชั้นปีที่ 2 เรียนรู้เกี่ยวกับการพัฒนาซอฟต์แวร์ โครงสร้างข้อมูล และปัญญาประดิษฐ์</p>
+                    </div>
+                </div>
 
-        <!-- ส่วนทักษะ -->
-        <div class="section">
-            <h2>Skills</h2>
-            <ul>
-                <li><strong>Programming Languages:</strong> [เช่น Java, Python, C++]</li>
-                <li><strong>Tools & Technologies:</strong> [เช่น Git, VS Code, HTML, CSS]</li>
-            </ul>
-        </div>
+                <div class="section">
+                    <h2 class="section-title">Tech Skills</h2>
+                    <div class="skills-container">
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">HTML / CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Git / GitHub</span>
+                        <span class="skill-tag">Machine Learning</span>
+                    </div>
+                </div>
+            </div>
 
-        <!-- ส่วนโปรเจกต์ -->
-        <div class="section">
-            <h2>Projects</h2>
-            <p><strong>[ชื่อโปรเจกต์ที่ 1]</strong></p>
-            <p>[อธิบายสั้นๆ ว่าโปรเจกต์นี้คืออะไร ทำงานอย่างไร และคุณรับผิดชอบส่วนไหน]</p>
-        </div>
+            <div class="right-column">
+                <div class="section" style="margin-bottom: 30px;">
+                    <h2 class="section-title">Projects</h2>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-title">Smart Management System</div>
+                        <div class="timeline-subtitle">Java | OOP | GUI</div>
+                        <p>พัฒนาระบบจัดการข้อมูลโดยประยุกต์ใช้หลักการ Object-Oriented Programming (OOP) ออกแบบโครงสร้างคลาส และจำลองการทำงานของฐานข้อมูลเบื้องต้น</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-title">Personal Portfolio Website</div>
+                        <div class="timeline-subtitle">HTML | CSS | GitHub Pages</div>
+                        <p>ออกแบบและพัฒนาเว็บไซต์เรซูเม่ส่วนตัว พร้อมนำระบบขึ้นใช้งานจริง (Deploy) ผ่าน Vercel / GitHub</p>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
     </div>
+
 </body>
 </html>
