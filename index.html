@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Tech Resume</title>
     <!-- นำเข้าฟอนต์ -->
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Noto+Sans+Thai:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Noto+Sans+Thai:wght@300;400;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,10 +16,10 @@
     <div id="splash-screen" onclick="enterResume()">
         <!-- เอฟเฟกต์ดาววิบวับ -->
         <div class="stars"></div>
-        
-        <!-- โลโก้วิศวะคอม AI ม.วลัยลักษณ์ -->
+
+        <!-- โลโก้ CPE & AI -->
         <div class="splash-logo">
-            <img src="cpe-logo.jpg">
+            <img class="wu-logo" src="cpe-logo.jpg" alt="CPE & AI Logo">
             <h1 class="splash-title">CPE <span>&</span> AI</h1>
             <p class="splash-subtitle">WALAILAK UNIVERSITY</p>
             <div class="splash-divider">
@@ -41,9 +41,10 @@
     <div class="glow-bg glow-red"></div>
 
     <div class="resume-wrapper">
+
         <div class="top-logo">
-            <h2> Resume </h2>
-            <p>FACULTY OF ENGINEERING </p>
+            <h2>C. ENG</h2>
+            <p>Faculty of Engineering · Walailak University</p>
         </div>
 
         <!-- รูปโปรไฟล์แบบซุ้มโค้ง (Arch) -->
@@ -56,28 +57,66 @@
 
         <!-- ชื่อและตำแหน่ง -->
         <div class="name-title">
-            <h1> นางสาว กิตยาภา วารี </h1>
+            <h1>นางสาว กิตยาภา วารี</h1>
             <p class="role-text">&lt; Computer Engineering Student /&gt;</p>
             <div class="tag-house">#สายโค้ดดิ้ง</div>
         </div>
 
+        <!-- การ์ดข้อมูล: แตะเพื่อพลิกดูค่า -->
         <div class="info-grid">
-            <div class="info-box">
-                <span class="info-label">มหาวิทยาลัย</span>
-                <span class="info-value"> Walailak University </span>
+
+            <div class="info-box" onclick="this.classList.toggle('flipped')">
+                <div class="flip-inner">
+                    <div class="flip-front">
+                        <span class="info-icon">🎓</span>
+                        <span class="info-label">มหาวิทยาลัย</span>
+                        <span class="flip-hint">แตะเพื่อดู</span>
+                    </div>
+                    <div class="flip-back">
+                        <span class="info-value">Walailak University</span>
+                    </div>
+                </div>
             </div>
-            <div class="info-box">
-                <span class="info-label">GPAX</span>
-                <span class="info-value">2.88</span>
+
+            <div class="info-box" onclick="this.classList.toggle('flipped')">
+                <div class="flip-inner">
+                    <div class="flip-front">
+                        <span class="info-icon">📊</span>
+                        <span class="info-label">GPAX</span>
+                        <span class="flip-hint">แตะเพื่อดู</span>
+                    </div>
+                    <div class="flip-back">
+                        <span class="info-value">2.88</span>
+                    </div>
+                </div>
             </div>
-            <div class="info-box">
-                <span class="info-label">ลักษณะเด่น</span>
-                <span class="info-value">AI · Full-Stack</span>
+
+            <div class="info-box" onclick="this.classList.toggle('flipped')">
+                <div class="flip-inner">
+                    <div class="flip-front">
+                        <span class="info-icon">⚡</span>
+                        <span class="info-label">ลักษณะเด่น</span>
+                        <span class="flip-hint">แตะเพื่อดู</span>
+                    </div>
+                    <div class="flip-back">
+                        <span class="info-value">AI · Full-Stack</span>
+                    </div>
+                </div>
             </div>
-            <div class="info-box">
-                <span class="info-label">ความสนใจ</span>
-                <span class="info-value">Data · IoT</span>
+
+            <div class="info-box" onclick="this.classList.toggle('flipped')">
+                <div class="flip-inner">
+                    <div class="flip-front">
+                        <span class="info-icon">🛰️</span>
+                        <span class="info-label">ความสนใจ</span>
+                        <span class="flip-hint">แตะเพื่อดู</span>
+                    </div>
+                    <div class="flip-back">
+                        <span class="info-value">Data · IoT</span>
+                    </div>
+                </div>
             </div>
+
         </div>
 
         <div class="tags-container">
@@ -91,7 +130,78 @@
             <h3>Background</h3>
             <p>นักศึกษาวิศวกรรมคอมพิวเตอร์ ผู้มีความหลงใหลในการเขียนโค้ดและการแก้ปัญหา (Problem Solving) มีประสบการณ์ในการพัฒนาระบบจัดการข้อมูลด้วย OOP และสร้างเว็บไซต์ Portfolio ด้วยตนเอง เป้าหมายคือการนำศาสตร์แห่งเทคโนโลยีมาประยุกต์ใช้เพื่อสร้างสรรค์นวัตกรรมด้าน AI ใหม่ๆ</p>
         </div>
-     <!-- ลิ้งเชื่อมต่อ -->
+
+        <!-- =========================================
+             การศึกษา
+             ========================================= -->
+        <div class="section">
+            <div class="section-title"><span class="node"></span>EDUCATION</div>
+            <div class="timeline">
+                <div class="entry">
+                    <div class="entry-head">
+                        <h4>วิศวกรรมคอมพิวเตอร์และปัญญาประดิษฐ์</h4>
+                        <span class="date-badge">2023 — ปัจจุบัน</span>
+                    </div>
+                    <div class="entry-org">สำนักวิชาวิศวกรรมศาสตร์และเทคโนโลยี · Walailak University</div>
+                    <p>GPAX 2.88 · รายวิชาที่เกี่ยวข้อง: Object-Oriented Programming, Data Structures, Web Development, Machine Learning เบื้องต้น</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- =========================================
+             ประสบการณ์
+             ========================================= -->
+        <div class="section">
+            <div class="section-title"><span class="node"></span>EXPERIENCE</div>
+            <div class="timeline">
+                <div class="entry">
+                    <div class="entry-head">
+                        <h4>ชื่อตำแหน่ง / โปรเจกต์รายวิชา</h4>
+                        <span class="date-badge">2025</span>
+                    </div>
+                    <div class="entry-org">ชื่อหน่วยงาน หรือ รายวิชา</div>
+                    <ul>
+                        <li>พัฒนาระบบจัดการข้อมูลด้วยหลัก OOP</li>
+                        <li>ออกแบบและพัฒนาเว็บไซต์ Portfolio ส่วนตัวด้วย HTML/CSS/JS</li>
+                    </ul>
+                </div>
+                <div class="entry alt">
+                    <div class="entry-head">
+                        <h4>ชื่อตำแหน่ง / กิจกรรม</h4>
+                        <span class="date-badge">2024</span>
+                    </div>
+                    <div class="entry-org">ชื่อหน่วยงาน</div>
+                    <p>คำอธิบายผลงานหรือความรับผิดชอบโดยย่อ</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- =========================================
+             โปรเจกต์
+             ========================================= -->
+        <div class="section">
+            <div class="section-title"><span class="node"></span>PROJECTS</div>
+            <div class="project-grid">
+                <div class="proj-card">
+                    <h4>ระบบจัดการข้อมูลด้วย OOP</h4>
+                    <p>ออกแบบโครงสร้างคลาสและระบบจัดเก็บข้อมูลสำหรับใช้งานจริงในรายวิชา</p>
+                    <div class="proj-stack"><span>Java</span><span>OOP</span></div>
+                </div>
+                <div class="proj-card">
+                    <h4>Portfolio Website</h4>
+                    <p>เว็บไซต์แสดงผลงานส่วนตัว ออกแบบและพัฒนาเองตั้งแต่ต้นจนจบ</p>
+                    <div class="proj-stack"><span>HTML</span><span>CSS</span><span>JS</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ปุ่มลิงก์ด่วน -->
+        <div class="action-menu">
+            <a href="https://www.facebook.com/pin.kityapar" target="_blank" class="action-btn glow-cyan">📘 Facebook</a>
+            <a href="mailto:kityaphawari@gmail.com?subject=ติดต่อจากเว็บไซต์ Resume" class="action-btn glow-red-btn">✉️ Email Me</a>
+        </div>
+
+        <!-- ช่องทางติดต่อ -->
         <div class="contact-links-section">
             <div class="contact-item">
                 <span class="contact-label">โทรศัพท์</span>
@@ -110,8 +220,7 @@
                 <a href="https://www.instagram.com/kxv_.pn/" target="_blank" class="contact-link">@kxv_.pn ↗</a>
             </div>
         </div>
-     <!-- ลิ้งเชื่อมต่อ -->
-        
+
         <div class="bottom-alert">
             ✦ สมาชิกกลุ่มนักพัฒนาระบบ (System Developer) ✦
         </div>
