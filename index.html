@@ -4,16 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Tech Resume</title>
+    <!-- นำเข้าฟอนต์ -->
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Noto+Sans+Thai:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- =========================================
+         หน้า Splash Screen (จอโหลดก่อนเข้าเว็บ)
+         ========================================= -->
+    <div id="splash-screen" onclick="enterResume()">
+        <!-- เอฟเฟกต์ดาววิบวับ -->
+        <div class="stars"></div>
+        
+        <!-- โลโก้วิศวะคอม AI ม.วลัยลักษณ์ -->
+        <div class="splash-logo">
+            <img src="https://upload.wikimedia.org/wikipedia/th/thumb/a/a2/Walailak_University_Logo.svg/1200px-Walailak_University_Logo.svg.png" alt="WU Logo" class="wu-logo">
+            <h1 class="splash-title">CPE <span>&</span> AI</h1>
+            <p class="splash-subtitle">WALAILAK UNIVERSITY</p>
+            <div class="splash-divider">
+                ✧ WISDOM · EXCELLENCE · CHARACTER ✧
+            </div>
+        </div>
+
+        <!-- ปุ่มกดเพื่อเข้าสู่เว็บ -->
+        <div class="tap-box">
+            <div class="tap-text-th">สัมผัสเพื่อเข้าสู่เรซูเม่</div>
+            <div class="tap-text-en">T A P &nbsp; T O &nbsp; E N T E R</div>
+        </div>
+    </div>
+
+    <!-- =========================================
+         เนื้อหาเรซูเม่หลัก (จะโผล่มาเมื่อกดหน้าจอบน)
+         ========================================= -->
     <div class="glow-bg glow-blue"></div>
     <div class="glow-bg glow-red"></div>
 
     <div class="resume-wrapper">
-        
         <div class="top-logo">
             <h2>{' C. ENG '}</h2>
             <p>FACULTY OF ENGINEERING</p>
@@ -35,19 +62,19 @@
         <div class="info-grid">
             <div class="info-box">
                 <span class="info-label">มหาวิทยาลัย</span>
-                <span class="info-value">Walailak University</span>
+                <span class="info-value">ม.วลัยลักษณ์</span>
             </div>
             <div class="info-box">
                 <span class="info-label">GPAX</span>
-                <span class="info-value">2.88</span>
+                <span class="info-value">3.xx</span>
             </div>
             <div class="info-box">
                 <span class="info-label">ลักษณะเด่น</span>
-                <span class="info-value">Full-Stack · AI</span>
+                <span class="info-value">AI · Full-Stack</span>
             </div>
             <div class="info-box">
                 <span class="info-label">ความสนใจ</span>
-                <span class="info-value">Data · IoT (รักสนุก)</span>
+                <span class="info-value">Data · IoT</span>
             </div>
         </div>
 
@@ -60,7 +87,7 @@
 
         <div class="story-box">
             <h3>Background</h3>
-            <p>นักศึกษาวิศวกรรมคอมพิวเตอร์ชั้นปีที่ 3 ผู้มีความหลงใหลในการเขียนโค้ดและการแก้ปัญหา (Problem Solving) มีประสบการณ์ในการพัฒนาระบบจัดการข้อมูลด้วย OOP และสร้างเว็บไซต์ Portfolio ด้วยตนเอง เป้าหมายคือการนำศาสตร์แห่งเทคโนโลยีมาประยุกต์ใช้เพื่อสร้างสรรค์นวัตกรรมใหม่ๆ</p>
+            <p>นักศึกษาวิศวกรรมคอมพิวเตอร์ ผู้มีความหลงใหลในการเขียนโค้ดและการแก้ปัญหา (Problem Solving) มีประสบการณ์ในการพัฒนาระบบจัดการข้อมูลด้วย OOP และสร้างเว็บไซต์ Portfolio ด้วยตนเอง เป้าหมายคือการนำศาสตร์แห่งเทคโนโลยีมาประยุกต์ใช้เพื่อสร้างสรรค์นวัตกรรมด้าน AI ใหม่ๆ</p>
         </div>
 
         <div class="action-menu">
@@ -73,8 +100,17 @@
         <div class="bottom-alert">
             ✦ สมาชิกกลุ่มนักพัฒนาระบบ (System Developer) ✦
         </div>
-
     </div>
 
+    <!-- สคริปต์สำหรับกดแล้วให้หน้าจอหายไป -->
+    <script>
+        function enterResume() {
+            const splash = document.getElementById('splash-screen');
+            splash.classList.add('fade-out');
+            setTimeout(() => {
+                splash.style.display = 'none';
+            }, 800); // รอให้เอฟเฟกต์จางหายเสร็จ (0.8 วินาที)
+        }
+    </script>
 </body>
 </html>
